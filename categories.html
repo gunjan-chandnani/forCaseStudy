@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function searchFood() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let foodBoxes = document.getElementsByClassName('box-3');
+            let container = document.querySelector('.categories .container');
+            let matchingItems = [];
+
+            for (let i = 0; i < foodBoxes.length; i++) {
+                let foodName = foodBoxes[i].getElementsByTagName('h3')[0]?.innerText.toLowerCase();
+                if (foodName && foodName.includes(input)) {
+                    matchingItems.push(foodBoxes[i]);
+                    foodBoxes[i].style.display = '';
+                } else {
+                    foodBoxes[i].style.display = 'none';
+                }
+            }
+
+            for (let item of matchingItems) {
+                container.insertBefore(item, container.firstChild);
+            }
+        }
+    </script>
+    
+</head>
+
+<body>
+    <!-- Navbar Section Starts Here -->
+    <section class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#" title="Logo">
+                    <img src="images/logo-removebg-preview (2).jpg" alt="Restaurant Logo" class="img-responsive">
+                </a>
+            </div>
+
+            <div class="menu text-right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="foods.html">Foods</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+    </section>
+    <!-- Navbar Section Ends Here -->
+
+    <!-- Search Section Starts Here -->
+    <section class="food-search text-center">
+        <div class="container">
+            <input type="search" id="searchInput" placeholder="Search for Food..." onkeyup="searchFood()">
+        </div>
+    </section>
+    <!-- Search Section Ends Here -->
+
+    <!-- Categories Section Starts Here -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="text-center">Explore Foods</h2>
+
+            <a href="category-foods.html">
+                <div class="box-3 float-container">
+                    <img src="images/mini.jpg" alt="Mini Meal" class="img-responsive img-curve">
+                    <div class="text-content">
+                        <h3>Mini Meal</h3>
+                        <p>Provided by: Chef Aditi</p>
+                        <p>Rating: ⭐⭐⭐⭐☆ (4.0)</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="box-3 float-container">
+                    <img src="images/cpecial-menu-parallax.jpg" alt="Special Meal" class="img-responsive img-curve">
+                    <div class="text-content">
+                        <h3>Special Meal</h3>
+                        <p>Provided by: Chef Rohan</p>
+                        <p>Rating: ⭐⭐⭐⭐⭐ (5.0)</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="box-3 float-container">
+                    <img src="images/full.jpg" alt="Full Meal" class="img-responsive img-curve">
+                    <div class="text-content">
+                        <h3>Full Meal</h3>
+                        <p>Provided by: Chef Priya</p>
+                        <p>Rating: ⭐⭐⭐⭐☆ (4.5)</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="box-3 float-container">
+                    <img src="images/halka.jpg" alt="Halka Meal" class="img-responsive img-curve">
+                    <div class="text-content">
+                        <h3>Halka Meal</h3>
+                        <p>Provided by: Chef Amit</p>
+                        <p>Rating: ⭐⭐⭐⭐☆ (4.3)</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="box-3 float-container">
+                    <img src="images/salad.jpg" alt="Healthy Meal" class="img-responsive img-curve">
+                    <div class="text-content">
+                        <h3>Healthy Meal</h3>
+                        <p>Provided by: Chef Sneha</p>
+                        <p>Rating: ⭐⭐⭐⭐⭐ (5.0)</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="box-3 float-container">
+                    <img src="images/simple.jpg" alt="Simple Meal" class="img-responsive img-curve">
+                    <div class="text-content">
+                        <h3>Simple Meal</h3>
+                        <p>Provided by: Chef Aakash</p>
+                        <p>Rating: ⭐⭐⭐⭐☆ (4.2)</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Additional meals can be added similarly -->
+
+            <div class="clearfix"></div>
+        </div>
+    </section>
+    <!-- Categories Section Ends Here -->
+
+    <!-- Social Section Starts Here -->
+    <section class="social">
+        <div class="container text-center">
+            <ul>
+                <li><a href="#"><img src="https://img.icons8.com/fluent/50/000000/facebook-new.png"/></a></li>
+                <li><a href="#"><img src="https://img.icons8.com/fluent/48/000000/instagram-new.png"/></a></li>
+                <li><a href="#"><img src="https://img.icons8.com/fluent/48/000000/twitter.png"/></a></li>
+            </ul>
+        </div>
+    </section>
+    <!-- Social Section Ends Here -->
+
+</body>
+</html>

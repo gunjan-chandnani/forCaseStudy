@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Made Harmony - Sign up as Home Chef</title>
+    <link rel="stylesheet" href="Styles.css">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="images/logo-removebg-preview (2).jpg" alt="Home Made Harmony">
+            </a>
+            <div class="contact-us">
+                <button id="contactUsBtn">Contact Us</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="intro">
+                <img src="chef-illustration.png" alt="Chef Illustration" class="chef-illustration">
+                <h1>Everybody loves to savour favourite delicacies from their native cuisine.</h1>
+                <h2>Introducing</h2>
+                <h2 class="brand">Home Made Harmony</h2>
+                <p>where customers can find & book their favourite dishes from the menu shared by Home Chefs in a few clicks and get them home delivered.</p>
+            </section>
+
+            <section class="signup">
+                <h2>Signup as Home Chef</h2>
+                <div class="progress-bar">
+                    <div class="step active">
+                        <span>1</span>
+                        <p>Personal Details</p>
+                    </div>
+                    <div class="step">
+                        <span>2</span>
+                        <p>Your Speciality</p>
+                    </div>
+                    <div class="step">
+                        <span>3</span>
+                        <p>Other Details</p>
+                    </div>
+                </div>
+                <form id="signupForm">
+                    <div class="form-step" id="step1">
+                        <label for="city">Select City</label>
+                        <select id="city" name="city" required>
+                            <option value="">Select a city</option>
+                            <option value="mumbai">Mumbai</option>
+                        </select>
+                        <p class="note">*Currently not in Thane & Navi Mumbai region</p>
+
+                        <label for="firstName">Your Name</label>
+                        <div class="name-inputs">
+                            <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                            <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                        </div>
+
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="Email Id" required>
+
+                        <label for="mobile">Mobile No.</label>
+                        <input type="tel" id="mobile" name="mobile" placeholder="Enter Mobile No." required>
+
+                        <label for="address">Your Address</label>
+                        <div class="address-inputs">
+                            <input type="text" id="flatNo" name="flatNo" placeholder="Flat No & Building Name" required>
+                            <input type="text" id="area" name="area" placeholder="Road or Area" required>
+                        </div>
+                        <div class="address-inputs">
+                            <input type="text" id="landmark" name="landmark" placeholder="Land Mark (Optional)">
+                            <input type="text" id="pincode" name="pincode" placeholder="Pincode" required>
+                        </div>
+
+                        <button type="button" class="next-btn">Next</button>
+                    </div>
+
+                    <div class="form-step" id="step2" style="display: none;">
+                        <label for="cuisine">Cuisine you specialize in</label>
+                        <input type="text" id="cuisine" name="cuisine" placeholder="e.g. Bengali, Maharashtrian" required>
+
+                        <label for="dishes">Dishes you love to cook</label>
+                        <input type="text" id="dishes" name="dishes" placeholder="e.g. Datta ki Sabji, Chicken Curry" required>
+
+                        <div class="button-group">
+                            <button type="button" class="prev-btn">Prev</button>
+                            <button type="button" class="next-btn">Next</button>
+                        </div>
+                    </div>
+
+                    <div class="form-step" id="step3" style="display: none;">
+                        <label>Do you have FSSAI license/registration</label>
+                        <div class="radio-group">
+                            <input type="radio" id="fssaiNo" name="fssai" value="no" required>
+                            <label for="fssaiNo">No</label>
+                            <input type="radio" id="fssaiYes" name="fssai" value="yes" required>
+                            <label for="fssaiYes">Yes</label>
+                        </div>
+
+                        <label>Any previous experience as Home Chef</label>
+                        <div class="radio-group">
+                            <input type="radio" id="experienceNo" name="experience" value="no" required>
+                            <label for="experienceNo">No</label>
+                            <input type="radio" id="experienceYes" name="experience" value="yes" required>
+                            <label for="experienceYes">Yes</label>
+                        </div>
+
+                        <label for="kitchenName">Home Kitchen Name(If Any)</label>
+                        <input type="text" id="kitchenName" name="kitchenName" placeholder="Home Kitchen Name(If Any)">
+
+                        <label for="website">Website Link</label>
+                        <input type="url" id="website" name="website" placeholder="Website Link">
+
+                        <label for="facebook">Facebook Profile</label>
+                        <input type="url" id="facebook" name="facebook" placeholder="Facebook Profile">
+
+                        <label for="instagram">Instagram Profile</label>
+                        <input type="url" id="instagram" name="instagram" placeholder="Instagram Profile">
+
+                        <label for="comments">Any Comments</label>
+                        <textarea id="comments" name="comments" rows="4"></textarea>
+
+                        <div class="button-group">
+                            <button type="button" class="prev-btn">Prev</button>
+                            <button type="submit" class="submit-btn">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+            <section class="features">
+                <h2>What's in it for You</h2>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-users"></i>
+                        <h3>Connecting you to customers looking for Native Indian Cuisine</h3>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-utensils"></i>
+                        <h3>You can focus on cooking delicious dishes. We will facilitate everything else, including delivery</h3>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Easy to use online platform - Upload menu, track orders and payments</h3>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h3>We understand you - Only Pre Orders, Weekend cooking options available</h3>
+                    </div>
+                </div>
+            </section>
+
+            <section class="looking-for">
+                <h2>We are looking for</h2>
+                <p>Passionate Home Chefs specializing in native Indian cuisines (E.g. Bengali, Rajasthani, Konkani, Tamil), who are keen to showcase their culinary skills and turn this into a sizeable earning opportunity.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Home Made Harmony. All Rights Reserved © Dreamsavour Ezolutions LLP</p>
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <script src="Scriptt.js"></script>
+</body>
+</html>

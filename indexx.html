@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homemade Harmony - Verification</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* Background Image Styling */
+    body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/subscription.jpg'); /* Add the path to your image here */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /* This ensures the image doesn't repeat */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+    /* Container Styling */
+    .container {
+      width: 100%;
+      max-width: 600px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      position: relative;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      font-weight: 500;
+      font-size: 2.2em;
+      margin-bottom: 20px;
+    }
+
+    /* Form Styling */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    label {
+      font-weight: 500;
+      color: #555;
+    }
+
+    input, select {
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      width: 100%;
+      box-sizing: border-box;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+
+    input:focus, select:focus {
+      border-color: #009ffd;
+      box-shadow: 0 0 5px rgba(0, 159, 253, 0.5);
+    }
+
+    .file-upload label {
+      background-color: #007bff;
+      color: white;
+      padding: 12px;
+      text-align: center;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .file-upload label:hover {
+      background-color: #0056b3;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    .progress-bar {
+      display: none;
+      width: 0;
+      height: 8px;
+      background-color: #28a745;
+      border-radius: 4px;
+      margin-top: 10px;
+      transition: width 0.4s ease;
+    }
+
+    /* Button Styling */
+    button {
+      background-color: #28a745;
+      color: white;
+      padding: 15px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      border: none;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #218838;
+      transform: translateY(-3px);
+    }
+
+    /* Floating Animation for Tooltip */
+    .tooltip {
+      font-size: 14px;
+      color: #666;
+      display: none;
+      margin-top: 5px;
+      position: relative;
+      animation: floatTooltip 1s ease infinite alternate;
+    }
+
+    @keyframes floatTooltip {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-5px); }
+    }
+
+    input:focus + .tooltip,
+    select:focus + .tooltip {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Homemade Harmony Verification</h1>
+    <p style="text-align: center; color: #666;">Complete the verification to proceed:</p>
+
+    <form id="verificationForm" onsubmit="return handleSubmit(event)">
+      <!-- Aadhar Verification -->
+      <div class="form-group">
+        <label for="aadhar">Aadhar Number <span style="color: red;">*</span></label>
+        <input type="number" id="aadhar" name="aadhar" placeholder="Enter your 12-digit Aadhar number" maxlength="12" required>
+        <div class="tooltip">Please enter your valid Aadhar number.</div>
+      </div>
+
+      <!-- Aadhar Document Upload -->
+      <div class="form-group file-upload">
+        <label for="aadhar-file">Upload Aadhar Document (PDF/PNG/JPG)</label>
+        <input type="file" id="aadhar-file" name="aadhar-file" accept=".pdf,.png,.jpg,.jpeg" required>
+        <div class="tooltip">Accepts PDF, PNG, and JPG formats.</div>
+        <div id="progressAadhar" class="progress-bar"></div>
+      </div>
+
+      <!-- Homemade Harmony Specific Verification -->
+      <div class="form-group">
+        <label for="verification-type">Verification Type for Homemade Harmony <span style="color: red;">*</span></label>
+        <select id="verification-type" name="verification-type" required>
+          <option value="" disabled selected>Select document type</option>
+          <option value="address-proof">Address Proof</option>
+          <option value="professional-certification">Professional Certification</option>
+          <option value="business-license">Business/Service License</option>
+          <option value="social-media">Social Media Profile</option>
+          <option value="customer-reviews">Customer Reviews & Testimonials</option>
+        </select>
+        <div class="tooltip">Choose a verification method specific to Homemade Harmony.</div>
+      </div>
+
+      <!-- Document Number (if applicable) -->
+      <div class="form-group">
+        <label for="doc-number">Document Number (if applicable) <span style="color: red;">*</span></label>
+        <input type="text" id="doc-number" name="doc-number" placeholder="Enter document number" required>
+        <div class="tooltip">Enter the number on your selected verification document, if applicable.</div>
+      </div>
+
+      <!-- File Upload (for the selected verification type) -->
+      <div class="form-group file-upload">
+        
+        <input type="file" id="doc-file" name="doc-file" accept=".pdf,.png,.jpg,.jpeg" required>
+        <div class="tooltip">Upload the document for your chosen verification type (Address proof, Certification, etc.).</div>
+        <div id="progressDoc" class="progress-bar"></div>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit">Submit Verification</button>
+    </form>
+  </div>
+
+  <script>
+    // Handle form submission
+    function handleSubmit(event) {
+      event.preventDefault();
+
+      const aadharFile = document.getElementById('aadhar-file');
+      const docFile = document.getElementById('doc-file');
+
+      if (validateFiles(aadharFile, docFile)) {
+        // Simulate file upload progress
+        simulateProgress('progressAadhar');
+        simulateProgress('progressDoc');
+        
+        alert("Verification Submitted!");
+      }
+    }
+
+    // Validate file formats and sizes
+    function validateFiles(aadharFile, docFile) {
+      const validExtensions = ['pdf', 'png', 'jpg', 'jpeg'];
+      const maxFileSize = 5 * 1024 * 1024; // 5MB
+
+      if (!validExtensions.includes(aadharFile.value.split('.').pop().toLowerCase())) {
+        alert('Invalid Aadhar file format. Only PDF, PNG, and JPG are allowed.');
+        return false;
+      }
+
+      if (!validExtensions.includes(docFile.value.split('.').pop().toLowerCase())) {
+        alert('Invalid document file format. Only PDF, PNG, and JPG are allowed.');
+        return false;
+      }
+
+      if (aadharFile.files[0].size > maxFileSize || docFile.files[0].size > maxFileSize) {
+        alert('File size cannot exceed 5MB.');
+        return false;
+      }
+
+      return true;
+    }
+
+    // Simulate upload progress
+    function simulateProgress(progressBarId) {
+      const progressBar = document.getElementById(progressBarId);
+      progressBar.style.display = 'block';
+      progressBar.style.width = '0%';
+
+      let width = 0;
+      const interval = setInterval(() => {
+        if (width >= 100) {
+          clearInterval(interval);
+        } else {
+          width += 10;
+          progressBar.style.width = width + '%';
+        }
+      }, 300);
+    }
+  </script>
+
+</body>
+</html>

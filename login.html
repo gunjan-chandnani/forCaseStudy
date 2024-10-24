@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Made Harmony - Login</title>
+    <!-- Google Fonts for attractive font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Role Selection -->
+        <div class="role-box">
+            <h2>Home Made Harmony</h2>
+            <form id="roleForm">
+                <select id="role" required>
+                    <option value="">-- Select Role --</option>
+                    <option value="receiver">Receiver</option>
+                    <option value="deliverer">Deliverer</option>
+                </select>
+                <button type="submit" class="submit-btn">Proceed</button>
+            </form>
+        </div>
+
+        <!-- Choose Login or Sign Up -->
+        <div class="auth-options" id="authOptions" style="display: none;">
+            <h2>Sign Up or Login</h2>
+            <button class="submit-btn" id="loginOption">Login</button>
+            <button class="submit-btn" id="signupOption">Sign Up</button>
+        </div>
+
+        <!-- Login Form -->
+        <div class="login-box" id="loginBox" style="display: none;">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="user-box">
+                    <input type="text" id="username" required>
+                    <label>Username</label>
+                </div>
+                <div class="user-box">
+                    <input type="password" id="password" required>
+                    <label>Password</label>
+                </div>
+                <button id="btn_gen" class="btn"><a href="index.html">Login</a></button>
+                
+            </form>
+        </div>
+
+        <!-- Sign Up Form -->
+        <div class="signup-box" id="signupBox" style="display: none;">
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <div class="user-box">
+                    <input type="text" id="name" required>
+                    <label>Full Name</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" id="phoneNumber" required>
+                    <label>Phone Number</label>
+                </div>
+                <div class="user-box">
+                    <input type="password" id="newPassword" required>
+                    <label>New Password</label>
+                </div>
+                <div class="user-box">
+                    <input type="password" id="rePassword" required>
+                    <label>Re-enter Password</label>
+                </div>
+                <div class="gender-box">
+                    <div class="gender-label" onclick="toggleGenderDropdown()">
+                        <span id="selectedGender">Select Gender</span>
+                    </div>
+                    <div class="gender-dropdown" id="genderDropdown">
+                        <label><input type="radio" name="gender" value="male"> Male ♂</label>
+                        <label><input type="radio" name="gender" value="female"> Female ♀</label>
+                        <label><input type="radio" name="gender" value="other">other</label>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Sign Up</button>
+            </form>
+        </div>
+
+        <p id="error-message"></p>
+    </div>
+
+    <!-- Go Back Button -->
+    <button class="back-btn" id="backToPrevious" style="display: none;">Go Back</button>
+
+    <script src="login.js"></script>
+</body>
+</html>

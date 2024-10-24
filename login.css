@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../images/back.jpg);
+    
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+
+
+.container {
+   
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 7% 0;
+}
+
+.role-box, .auth-options, .login-box, .signup-box {
+   
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Styling for the "Home Made Harmony" title */
+h2 {
+    font-size: 48px; /* Increase the font size */
+    font-family: 'Dancing Script', cursive; /* Apply the Dancing Script font */
+    color: #ff5e62; /* Use a vibrant color for the title */
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle text shadow */
+}
+
+select, button {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ff5e62;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.user-box {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.user-box input {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #ff5e62;
+    outline: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.user-box label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    color: #999;
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+.user-box input:focus ~ label,
+.user-box input:valid ~ label {
+    top: -20px;
+    color: #ff5e62;
+    font-size: 12px;
+}
+
+/* Gender selection dropdown */
+.gender-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.gender-label {
+    cursor: pointer;
+    background: #fff;
+    border: 2px solid #ff5e62;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.gender-dropdown {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    border: 2px solid #ff5e62;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    text-align: left;
+    z-index: 1;
+}
+
+.gender-dropdown label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.gender-dropdown input[type="radio"] {
+    margin-right: 10px;
+}
+
+.gender-box.active .gender-dropdown {
+    display: block;
+}
+
+/* Submit button */
+.submit-btn {
+    background: #ff5e62;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background: #ff9966;
+}
+
+/* Back button styling */
+.back-btn {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: white;
+    color: #ff5e62;
+    width: 120px; 
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s;
+    
+}
+
+.back-btn:hover {
+    background: #ff5e62;
+    color: white;
+}
+
+#error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}

@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Important to make website responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiffin Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Link our CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar Section Starts Here -->
+    <section class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#" title="Logo">
+                    <img src="images/logo-removebg-preview (2).jpg" alt="Restaurant Logo" class="img-responsive">
+                </a>
+            </div>
+
+            <div class="menu text-right">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="categories.html">Categories</a>
+                    </li>
+                    <li>
+                        <a href="foods.html">Foods</a>
+                    </li>
+                    <li>
+                        
+                        <a href="contact.html">Contact</a>
+                    </li>
+                    <li><a href="#" id="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
+                    
+                </ul>
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+    </section>
+    <!-- Nav
+     ar Section Ends Here -->
+
+    <!-- fOOD sEARCH Section Starts Here -->
+    <section class="food-search text-center">
+        <div class="container">
+            
+            <form action="food-search.html" method="POST">
+                <input type="search" name="search" placeholder="Search for Food.." required>
+                <input type="submit" name="submit" value="Search" class="btn btn-primary">
+            </form>
+
+        </div>
+    </section>
+    <!-- fOOD sEARCH Section Ends Here -->
+
+    <!-- CAtegories Section Starts Here -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="text-center">Explore Foods</h2>
+
+            <a href="category-foods.html">
+            <div class="box-3 float-container">
+                <img src="images/blog_bg.jpg" alt="Lunch" class="img-responsive img-curve">
+
+                <h3 class="float-text text-white">Breakfast</h3>
+            </div>
+            </a>
+
+            <a href="#">
+            <div class="box-3 float-container">
+                <img src="images/mini.jpg" alt="Burger" class="img-responsive img-curve">
+
+                <h3 class="float-text text-white">Lunch</h3>
+            </div>
+            </a>
+
+            <a href="#">
+            <div class="box-3 float-container">
+                <img src="images/cpecial-menu-parallax.jpg" alt="Momo" class="img-responsive img-curve">
+
+                <h3 class="float-text text-white">Dinner</h3>
+            </div>
+            </a>
+
+            <div class="clearfix"></div>
+        </div>
+    </section>
+    <!-- Categories Section Ends Here -->
+
+    <!-- fOOD MEnu Section Starts Here -->
+    <section class="food-menu">
+        <div class="container">
+            <h2 class="text-center">Food Menu</h2>
+
+            <div class="food-menu-box">
+                <div class="food-menu-img">
+                    <img src="images/regular.jpg" alt="Regular Meal" class="img-responsive img-curve">
+                </div>
+
+                <div class="food-menu-desc">
+                    <h4>Regular Meal</h4>
+                    <p>Includes 1 vegetable, 1 dal, 3 chapati, 1 salad/soup</p>
+                <H3>Price: ₹160 </H3>
+                <p>₹940 for 1 week <del>₹978</del></p>
+                <p>₹1850 for 2 weeks <del>₹1956</del></p>
+                <p>₹3610 for 1 month <del>₹3912</del></p>
+                    <br>
+                    <a href="order.html" class="btn btn-primary">Order Now</a>
+                    <button class="btn btn-primary add-to-cart" data-name="Regular Meal" data-price="160">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="food-menu-box">
+                <div class="food-menu-img">
+                    <img src="images/halka.jpg" alt="LIGHT BITE" class="img-responsive img-curve">
+                </div>
+
+                <div class="food-menu-desc">
+                    <h3>LIGHT BITE</h3>
+                <p>Includes 1 vegetable, 1 dal, 3 chapati, 1 salad/soup</p>
+                <H3>Price: ₹120 </H3>
+                <p>₹940 for 1 week <del>₹978</del></p>
+                <p>₹1850 for 2 weeks <del>₹1956</del></p>
+                <p>₹3610 for 1 month <del>₹3912</del></p>
+                    <br>
+
+                    <a href="#" class="btn btn-primary">Order Now</a>
+                    <button class="btn btn-primary add-to-cart" data-name="LIGHT BITE" data-price="120">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="food-menu-box">
+                <div class="food-menu-img">
+                    <img src="images/cpecial-menu-parallax.jpg" alt="Special Meal" class="img-responsive img-curve">
+                </div>
+
+                <div class="food-menu-desc">
+                    <h3>Special Meal</h3>
+                <p>Includes 1 vegetable, 1 dal, 3 chapati, 1 salad/soup</p>
+                <h3>Price: ₹140</h3>
+                <p>₹1060 for 1 week <del>₹1104</del></p>
+                <p>₹2085 for 2 weeks <del>₹2208</del></p>
+                <p>₹4010 for 1 month <del>₹4063</del></p>
+                    <br>
+
+                    <a href="#" class="btn btn-primary">Order Now</a>
+                    <button class="btn btn-primary add-to-cart" data-name="Special Meal" data-price="140">Add to Cart</button>
+                    
+                </div>
+            </div>
+
+            <div class="food-menu-box">
+                <div class="food-menu-img">
+                    <img src="images/mini.jpg" alt="JUMBO FEAST" class="img-responsive img-curve">
+                </div>
+
+                <div class="food-menu-desc">
+                    <h3>JUMBO FEAST</h3>
+                <p>Includes 1 vegetable, 1 dal, 3 chapati, 1 salad/soup</p>
+                <h3>Price: ₹170</h3>
+                <p>₹940 for 1 week <del>₹978</del></p>
+                <p>₹1850 for 2 weeks <del>₹1956</del></p>
+                <p>₹3610 for 1 month <del>₹3912</del></p>
+                    <br>
+
+                    <a href="#" class="btn btn-primary">Order Now</a>
+                    <button class="btn btn-primary add-to-cart" data-name="Jumbo Feast" data-price="170">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="food-menu-box">
+                <div class="food-menu-img">
+                    <img src="images/salad.jpg" alt="HEALTHY SUPER BOWL" class="img-responsive img-curve">
+                </div>
+
+                <div class="food-menu-desc">
+                    <h3>HEALTHY SUPER BOWL</h3>
+                <p>This includes veggies, protein, healthy fats, rice and lots of amazing flavors! In 650ml</p>
+                <h3>Price: ₹310</h3>
+                <p>₹1479 for 1 week <del>₹1545</del></p>
+                <p>₹2905 for 2 weeks <del>₹3090</del></p>
+                <p>₹5651 for 1 month <del>₹6180</del></p>
+                    <br>
+
+                    <a href="#" class="btn btn-primary">Order Now</a>
+                    <button class="btn btn-primary add-to-cart" data-name="Healthy super bowl" data-price="310">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="food-menu-box">
+                <div class="food-menu-img">
+                    <img src="images/cpecial-menu-parallax.jpg" alt="Chicke Hawain Momo" class="img-responsive img-curve">
+                </div>
+
+                <div class="food-menu-desc">
+                    <h3>MINI MEAL</h3>
+                    <p>1 Vegetable, 3 Chapati</p>
+                    <h3>Price: ₹75</h3>
+                    <p>₹671 for 1 week <del>₹695</del></p>
+                    <p>₹1323 for 2 weeks <del>₹1323</del></p>
+                    <p>₹2589 for 1 month <del>₹2778</del></p>
+                    <br>
+
+                    <a href="#" class="btn btn-primary">Order Now</a>
+                    <button class="btn btn-primary add-to-cart" data-name="Mini Meal" data-price="75">Add to Cart</button>
+                </div>
+            </div>
+
+
+            <div class="clearfix"></div>
+
+            
+
+        </div>
+        
+        
+
+        <p class="text-center">
+            <a href="#">See All Foods</a>
+        </p>
+    </section>
+    <section class="cart-section" style="display: none;">
+        <div class="container">
+            <h2 class="text-center">Your Cart</h2>
+            <div id="cart-items"></div>
+            <h3>Total: ₹<span id="cart-total">0</span></h3>
+            <button id="order-button" class="btn btn-primary" style="display: none;">Confirm Order</button>
+        </div>
+    </section>
+    
+    <div id="order-confirmation" style="display: none;">
+        <p>Your order has been confirmed!</p>
+        <button id="btn_gen" class="btn btn-primary" onclick="location.href='payment.html'">Confirm Order</button>
+    </div>
+    <!-- fOOD Menu Section Ends Here -->
+
+    <div class="mt-4">
+        <h6 class="wouldlike"><h2>Trending chefs</h2></h6>
+        <div class="trendchefs_mobile">
+            <!-- Chef 1 -->
+            <div class="chef-column">
+                <div class="menu_item_holder">
+                    <div class="menu_item">
+                        <div class="menu_img_container" style="background:url('images/chef1.webp') no-repeat; background-position: center; background-size: cover; border-radius: 10px;"></div>
+                        <div class="menu_shotr_info">
+                            <h4 class="dish_name">Moma's Kitchen</h4>
+                            <div class="rating-location">
+                                <span class="badge-success"><i class="fa fa-star"></i> 4.5</span>
+                                <span class="product_from">Gujarati</span>
+                            </div>
+                            <div class="location">
+                                <i class="fa fa-map-marker-alt"></i> Ghatkopar East +5 kms
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Chef 2 -->
+            <div class="chef-column">
+                <div class="menu_item_holder">
+                    <div class="menu_item">
+                        <div class="menu_img_container" style="background:url('images/chef2.jpg') no-repeat; background-position: center; background-size: cover; border-radius: 10px;"></div>
+                        <div class="menu_shotr_info">
+                            <h4 class="dish_name">Urmie's Kitchen</h4>
+                            <div class="rating-location">
+                                <span class="badge-success"><i class="fa fa-star"></i> 4.9</span>
+                                <span class="product_from">Bengali</span>
+                            </div>
+                            <div class="location">
+                                <i class="fa fa-map-marker-alt"></i> Kandivali East +5 kms
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Chef 3 -->
+            <div class="chef-column">
+                <div class="menu_item_holder">
+                    <div class="menu_item">
+                        <div class="menu_img_container" style="background:url('images/chef3.webp') no-repeat; background-position: center; background-size: cover; border-radius: 10px;"></div>
+                        <div class="menu_shotr_info">
+                            <h4 class="dish_name">Namita Pal</h4>
+                            <div class="rating-location">
+                                <span class="badge-success"><i class="fa fa-star"></i> 4.6</span>
+                                <span class="product_from">North Indian</span>
+                            </div>
+                            <div class="location">
+                                <i class="fa fa-map-marker-alt"></i> Vikhroli +5 kms
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            
+            <div class="chef-column">
+                <div class="menu_item_holder">
+                    <div class="menu_item">
+                        <div class="menu_img_container" style="background:url('images/chef4.webp') no-repeat; background-position: center; background-size: cover; border-radius: 10px;"></div>
+                        <div class="menu_shotr_info">
+                            <h4 class="dish_name">Kavita's Kitchen</h4>
+                            <div class="rating-location">
+                                <span class="badge-success"><i class="fa fa-star"></i> 4.3</span>
+                                <span class="product_from">North Indian</span>
+                            </div>
+                            <div class="location">
+                                <i class="fa fa-map-marker-alt"></i> Andheri West +5 kms
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <section id="why-yummy-tiffins">
+        <h2>Why HomeMade Harmony</h2>
+        <div class="features">
+            <div class="feature">
+                <img src="images/location.jpeg"Location Icon class="feature-icon">
+                <h3>Locations</h3>
+                <p>We are a solution for every query of “tiffin service near me” or “homemade food near me”. We deliver your meal all over Mumbai including Andheri, Bandra, Lower Parel, Churchgate, Dadar, Nariman Point, Vile-Parle, Santacruz, Goregaon, Fort, Mahalaxmi, Kurla, CST, Chembur, and many other areas.</p>
+            </div>
+            <div class="feature">
+                <img src="images/hygine.png"Location Icon class="feature-icon">
+                <h3>Hygiene & Packaging</h3>
+                <p>HomeMade Harmony never compromises on cleanliness and hygiene. We take safety measures at every step with zero risk of contamination right until the food reaches you. Our kitchen is cleaned and disinfected twice a day along with regular pest-control treatments. Our food is packed in disposable, BPA-free, microwave-friendly containers.</p>
+            </div>
+        </div>
+    </section>
+
+    
+    
+    
+<div>
+        <section class="cuisines">
+            <h2>Our range of cuisines</h2>
+            <div class="cuisine-slideshow"> <div class="cuisine-slider">
+                <div class="cuisine-item">
+                        <img src="images/panjabi_cuisine.jpg" alt="Punjabi Cuisine" width="100" height="100">
+
+                        <div class="cuisine-info">
+                            <h3>Punjabi</h3>
+                            <p>Punjab</p>
+                        </div>
+                    </div>
+                    <div class="cuisine-item">
+                        <img src="images/bengali.png" alt="Bengali Cuisine" width="100" height="100">
+
+                        <div class="cuisine-info">
+                            <h3>Bengali</h3>
+                            <p>West Bengal</p>
+                        </div>
+                    </div>
+                    <div class="cuisine-item">
+                        <img src="images/gujrati_cuisine.jpg" alt="Gujarati Cuisine" width="100" height="100">
+
+                        <div class="cuisine-info">
+                            <h3>Gujarati</h3>
+                            <p>Gujarat</p>
+                        </div>
+                    </div>
+                    <div class="cuisine-item">
+                        <img src="images/northindian.png" alt="northindian Cuisine" width="100" height="100">
+
+                        <div class="cuisine-info">
+                            <h3>South Indian</h3>
+                            <p>Tamil Nadu</p>
+                        </div>
+                    </div>
+                    <div class="cuisine-item">
+                        <img src="images/Maharashtrian_cuisine.jpg" alt="Punjabi Cuisine" width="100" height="100">
+
+                        <div class="cuisine-info">
+                            <h3>Maharashtrian</h3>
+                            <p>Maharashtra</p>
+                        </div>
+                    </div>
+                   
+
+                   
+                    </div>
+                </div>
+                <button class="slide-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="slide-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <section class="offers">
+            <h2>Offers for you</h2>
+            <div class="offer-cards">
+                <div class="offer-card">
+                    <img src="images/banner_big3.png" alt="30% OFF on 1st Order"width="300" height="150">
+                    <h3>30% OFF on 1st Order</h3>
+                    <p>Use code: FIRST30</p>
+                </div>
+                <div class="offer-card">
+                    <img src="images/banner_big2.png" alt="Buy 2 Get 1 FREE"width="300" height="150">
+
+                    <h3>Buy 2 Get 1 Free</h3>
+                    <p>On selected items</p>
+                </div>
+                
+            </div>
+        </section>
+
+        
+
+        <section class="why-choose-us">
+            <h2>Choose HomeMade Harmony</h2>
+            <div class="features">
+                <div class="feature-item">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Authentic Home Cooking</h3>
+                    <p>Taste the love in every bite</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>Quick Delivery</h3>
+                    <p>Hot meals at your doorstep</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>Supporting Local Chefs</h3>
+                    <p>Empowering home cooks</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Fresh Ingredients</h3>
+                    <p>Quality you can trust</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h2>What would you like to do</h2>
+            <div class="cta-cards">
+                <div class="cta-card">
+                    <h3>Order a Meal / Dish Now</h3>
+                    <img src="images/delivery.jpg" alt="Order a Meal">
+                    <button class="cta-btn">Order Now</button>
+                </div>
+                <div class="cta-card">
+                    <h3>Choose a Subscription Plan</h3>
+                    <img src="images/subscription.jpg" alt="Subscription Plan">
+                    <button class="cta-btn">Subscribe</button>
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="testimonials">
+            <h2>What are our customers saying</h2>
+            <div class="testimonial-slider">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <img src="review1.jpeg" alt="Aditi Taksale">
+                    <div class="stars">★★★★★</div>
+                    <p>"Amazing home-cooked food! Tastes just like my mom's cooking."</p>
+                    <h4>Aditi Taksale</h4>
+                    <span>TV Actress</span>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <img src="review2.jpeg" alt="Gunjan Chandani">
+                    <div class="stars">★★★★☆</div>
+                    <p>"Great variety and excellent taste. Highly recommended!"</p>
+                    <h4>Gunjan Chandani</h4>
+                    <span>TV Actress</span>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <img src="review3.jpeg" alt="Laksh Sodhai">
+                    <div class="stars">★★★★★</div>
+                    <p>"The convenience of home-cooked meals without the hassle. Love it!"</p>
+                    <h4>Laksh Sodhai</h4>
+                    <span>Customer</span>
+                </div>
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card">
+                    <img src="review4.jpeg" alt="Vanshika Ambwani">
+                    <div class="stars">★★★★★</div>
+                    <p>"The convenience of home-cooked meals without the hassle. Love it!"</p>
+                    <h4>Vanshika Ambwani</h4>
+                    <span>Customer</span>
+                </div>
+            </div>
+           
+        </section>
+        
+        </section>
+        <section class="become-member">
+            <div class="member-content">
+                <h2>Become a Member</h2>
+                <button id="btn_gen" class="btn btn-primary" onclick="location.href='indexx.html'">Sign up as a Home Chef</button>
+            </div>
+            <img src="images/Beomemember_copy.jpg" alt="Become a Member">
+        </section>
+
+        <section class="popular-locations">
+            <h2>Popular locations</h2>
+            <div class="location-grid">
+                <a href="#" class="location-item">Andheri</a>
+                <a href="#" class="location-item">Bandra</a>
+                <a href="#" class="location-item">Powai</a>
+                <a href="#" class="location-item">Juhu</a>
+                <a href="#" class="location-item">Dadar</a>
+                <a href="#" class="location-item">Worli</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>HomeMade Harmony connects you with home chefs for authentic, home-cooked meals.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">How it Works</a></li>
+                    <li><a href="#">Become a Chef</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: homemadeharmony@gmail.com</p>
+                <p>Phone: +91 8767317170</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 HomeMade Harmony. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="location-modal" class="modal">
+        <div class="modal-content">
+            <h2>Enter your area to explore Menu from chefs near you</h2>
+            <div class="search-container">
+                <input type="text" id="location-search" placeholder="Enter & select your area / location">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <img src="/placeholder.svg?height=200&width=200" alt="Location Illustration">
+            <p>In Mumbai</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
